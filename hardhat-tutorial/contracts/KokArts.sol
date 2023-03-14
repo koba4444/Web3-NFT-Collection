@@ -44,7 +44,7 @@ contract KokArts is ERC721Enumerable, Ownable {
       * Constructor for Crypto Devs takes in the baseURI to set _baseTokenURI for the collection.
       * It also initializes an instance of whitelist interface.
       */
-    constructor (string memory baseURI, address whitelistContract) ERC721("KokArts", "CD") {
+    constructor (string memory baseURI, address whitelistContract) ERC721("KokArts", "KART") {
         _baseTokenURI = baseURI;
         whitelist = IWhitelist(whitelistContract);
     }
@@ -65,7 +65,7 @@ contract KokArts is ERC721Enumerable, Ownable {
     function presaleMint() public payable onlyWhenNotPaused {
         require(presaleStarted && block.timestamp < presaleEnded, "Presale is not running");
         require(whitelist.whitelistedAddresses(msg.sender), "You are not whitelisted");
-        require(tokenIds < maxTokenIds, "Exceeded maximum Crypto Devs supply");
+        require(tokenIds < maxTokenIds, "Exceeded maximum KokArts supply");
         require(msg.value >= _price, "Ether sent is not correct");
         tokenIds += 1;
         //_safeMint is a safer version of the _mint function as it ensures that
@@ -79,7 +79,7 @@ contract KokArts is ERC721Enumerable, Ownable {
     */
     function mint() public payable onlyWhenNotPaused {
         require(presaleStarted && block.timestamp >=  presaleEnded, "Presale has not ended yet");
-        require(tokenIds < maxTokenIds, "Exceed maximum Crypto Devs supply");
+        require(tokenIds < maxTokenIds, "Exceed maximum KokArts supply");
         require(msg.value >= _price, "Ether sent is not correct");
         tokenIds += 1;
         _safeMint(msg.sender, tokenIds);
