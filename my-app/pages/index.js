@@ -299,14 +299,14 @@ export default function Home() {
 
     // If we are currently waiting for something, return a loading button
     if (loading) {
-      return <button className={styles.button}>Loading...</button>;
+      return <button className={styles.button}>Wait...</button>;
     }
 
     // If connected user is the owner, and presale hasn't started yet, allow them to start the presale
     if (isOwner && !presaleStarted) {
       return (
         <button className={styles.button} onClick={startPresale}>
-          Start Presale!
+          Presale started!
         </button>
       );
     }
