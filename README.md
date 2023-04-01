@@ -1,10 +1,10 @@
-Pet-project for minting NFT to addresses previously added to Whitelist here: https://web3-dapp-whitelist-u8q6-git-master-koba4444.vercel.app/
+Pet-project for minting NFT to addresses previously added to Whitelist here: https://web3-dapp-whitelist-u8q6.vercel.app/
 
 Deployed to https://web3-nft-collection-rho.vercel.app/
 
-Testnet goerli
+Testnet sepolia
 
-Contract address 0x6C93A387DeC26c61D9F44Dc4B154ea953de89a0B
+Contract address 0x3b152DfE7C8a7DeBF14491805a8f90bc8Df32f54
 
 NFTs registered and can be watched on opensea.com here:
- https://testnets.opensea.io/assets/goerli/0x59fba0ae558c8685d9d970b23cea77614d1cc362/1
+ https://testnets.opensea.io/assets/goerli/0x3b152DfE7C8a7DeBF14491805a8f90bc8Df32f54/1
