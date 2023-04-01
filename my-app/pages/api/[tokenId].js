@@ -10,7 +10,7 @@ export default function handler(req, res) {
     // More info can be found here: https://docs.opensea.io/docs/metadata-standards
     res.status(200).json({
       name: "KokArt #" + tokenId,
-      description: "KokArts is a collection of developers in crypto",
+      description: "KokArts is a collection of developers in KOK Arts",
       image: image_url + tokenId + ".svg",
     });
   }
